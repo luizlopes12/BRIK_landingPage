@@ -1645,6 +1645,16 @@ footer .info-row02  div figure{
     }
 }
 
+@media only screen and (min-width: 1024px) {    
+    .data-cards-container {
+        display: flex;
+        flex-direction: initial;
+        transform: translateY(-150px);
+    }
+    .data-cards-container .row {
+        width: 50%;
+    }
+}
 /* 1440px */
 @media only screen and (min-width: 1440px) {    
     /* 1st Section hero */
@@ -1666,3 +1676,5 @@ footer .info-row02  div figure{
     }
 
 }
+
+
