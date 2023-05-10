@@ -167,6 +167,7 @@ nav{
     position: relative;
     width: 100%;
     height: 7%;
+    z-index: 99999;
 }
 
 nav .logo{
@@ -1430,7 +1431,6 @@ footer .info-row02  div figure{
     .menu-btn{
         display: none;
     }
-
     .nav-links{
         display: flex;
         justify-content: end;
@@ -1645,7 +1645,7 @@ footer .info-row02  div figure{
     }
 }
 
-@media only screen and (min-width: 1024px) {    
+@media only screen and (min-width: 1280px) {    
     .data-cards-container {
         display: flex;
         flex-direction: initial;
