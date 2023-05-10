@@ -1,0 +1,1668 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --hero-green: #93E735;
+    --green-markdown: #6A9C31;
+    --black: #1A1F23;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+body, html{
+    width: 100vw;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
+
+/* ---- default styles ---- */
+figure img{
+    height: 100%;
+}
+
+.txt-box{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.txt-box h1{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.txt-box h1 span {
+    padding: 5px;
+    color: white;
+    background-color: var(--green-markdown);
+}
+
+.txt-box p{
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input{
+    border: none;
+}
+
+button{
+    border: none;
+}
+
+.section-header{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2{
+    font-weight: 400;
+    color: var(--green-markdown);
+}
+
+.header-dark-section h2{
+    color: var(--hero-green);
+}
+
+.txtHero h1 span{
+    background-color: transparent;
+}
+/*------------------------------------------*/
+
+/* ---- mobile first ---- */
+.menu-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.drop-menu{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 130px 73px;
+    height: 100vh;
+    z-index: 10;
+    list-style: none;
+    background-color: #1A1F23; 
+    transition: 0.5s transform ease-out;
+    transform: translateX(100%);
+}
+
+.drop-menu-open{
+    transform: translateX(0);
+}
+
+.drop-menu li a{
+    text-decoration: none;   
+    color: white;
+}
+
+.close-btn{
+    position: absolute;
+    top: 40px;
+    right: 47px;
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+}
+
+.close-btn img{
+    width: 100%
+}
+
+.nav-links{
+    display: none;
+}
+
+/*  Section Hero */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    width: 100vw;
+    height: 145vh;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    gap: 17%;
+    align-items: center;
+
+    padding: 10% 10% 0 10%;
+    height: 95vh;
+    width: 100vw;
+    background: url("../img/hero-section-bg.svg") left top no-repeat;
+}
+
+.hero-gallery{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 7%;
+}
+
+nav .logo{
+    height: 100%;
+}
+
+.bg-disco{
+    position: absolute;
+    height: 48%;
+    top: 20%;
+    left: 0;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.txtHero-container{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.txtHero{
+    width: 94%;
+    color: white;
+}
+
+.txtHero h1{
+    font-size: 2.3rem;
+    color: white;
+}
+
+.txtHero h1 .hero-span{
+    color: var(--hero-green);
+}
+
+.txtHero p{
+    font-weight: lighter;
+}
+
+.hero-search{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    padding: 17px;
+    width: fit-content;
+    overflow: hidden;
+
+    color: white;
+    text-decoration: none;
+    background-color: var(--green-markdown);
+    box-shadow: 10px 0px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+    border-radius: 33px;
+    border: none;
+    outline: none;
+}
+
+.hero-search h1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* --> cards from hero section */
+.data-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.1));
+}
+
+.data-cards-container .row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.data-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    background-color: white;
+}
+
+/* seção 02 ---------------------------------------*/
+.sobre-nos-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sobre-nos-section .txt-box{
+    padding: 10% 10% 0 10%;
+}
+
+.txtImg01 figure,
+.txtImg02 figure{
+    width: 100%;
+    overflow: hidden;
+}
+
+.txtImg02 figure{
+    text-align: right;
+}
+
+.txtImg01 figure img,
+.txtImg02 figure img{
+    width: 70%;
+}
+
+.txtImg01 figure img{
+    border-radius: 0 20px 20px 0;
+}
+
+.txtImg02 figure img{
+    border-radius: 20px 0 0 20px;
+}
+
+.txtImg-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.txtImg02{
+    display: flex;
+    justify-content: right;
+}
+
+.txtImg02 span{
+    padding: 0 10% 0 10%;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--green-markdown)
+}
+
+/* seção 03 */
+.oq-fazemos-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 130px 10%;
+    margin-top: 130px;
+    color: white;
+    background-color: var(--black);
+}
+
+.oq-fazemos-section h1{
+    color: white;
+}
+
+.oq-fazemos-section .txt-box video{
+    background-color: black;
+}
+
+/* seção 04 */
+.tipos-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 0 30px 10%;
+    margin-top: 130px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.tipos-section .txt-box{
+    padding: 0 10% 0 0;
+}
+
+.imovel-cards-container{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    /* overflow: overlay; */
+}
+
+.imovel-card{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 10px;
+    align-items: end;
+    position: relative;
+    padding: 40px 25px;
+    width: 250px;
+    height: 350px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+    /* scrollbar-width: thin; */
+    /* scrollbar-color: var(--green-markdown); */
+}
+
+.urban-card{
+    background: no-repeat url("../img/imovel-bgCard01.svg") 100%;
+}
+
+.rural-card{
+    margin-right: 30px;
+    background: no-repeat url("../img/imovel-bgCard02.svg") 100%;
+}
+
+.tipo-hover{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 53px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green-markdown);
+    transition: 1s all ease-in-out;
+    opacity: 0;
+}
+
+.lot-card-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 13px;
+    font-size: 1.1rem;
+    font-weight: light;
+    transition: 1s all ease-in-out;
+}
+
+.lot-card-header{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.lot-card-content img{
+    width: 53px;
+}
+
+.lot-card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.lot-card-footer a{
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+}
+
+.urban-card:hover .urban-hover{
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+}
+
+.rural-card:hover .rural-hover{
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+}
+
+/*seção 05*/
+.parceiros-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    padding: 130px 10%;
+    margin-top: 130px;
+    color: white;
+    background-color: var(--black);
+}
+
+.parceiros-section h1{
+    color: white !important;
+}
+
+.parceiros-carousel-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 43px; */
+    align-items: center;
+    width: 80%;
+}
+
+.parceiros-cards-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.parceiro-card{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: end;
+    padding: 20px 20px;
+    width: 100% !important;
+    height: 400px;
+    background-color: rgb(76, 76, 76);
+}
+
+.parceiro-card .parceiro-content{
+    display: flex;
+    gap: 15px;
+}
+
+.parceiro-card .parceiro-logo{
+    width: 78px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.parceiro-card  article h1{
+    font-size: 1.3rem;
+}
+
+.parceiro-card article h2{
+    font-size: 0.8rem;
+}
+
+/* pagination */
+.swiper-pagination{
+    position: absolute;
+    bottom: 100px;
+}
+  
+.swiper-pagination-bullet{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border: 2px solid var(--hero-green);
+    border-radius: 50%;
+    background: var(--hero-green);
+    --swiper-pagination-bullet-inactive-opacity: 0.1;
+}
+  
+.swiper-button-next, 
+.swiper-button-prev{
+    position: absolute;
+    top: 65%;   
+    opacity: 0.7;
+    color: var(--hero-green);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev{
+    left: 5%;
+}
+
+.swiper-button-next{
+    right: 5%;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: var(--hero-green);
+}
+
+/*seção 06*/
+.avali-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    padding: 130px 10%;
+    margin-top: -1px;
+    color: white;
+    background-color: var(--black);
+}
+
+.avali-section .section-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.avali-section .section-header h1{
+    font-size: 2rem;
+} 
+
+.avaliacoes-carousel-container{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    /* gap: 40px; */
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.avali-guard{
+    width: 100%;
+}
+.avaliacoes-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    height: 500px;
+}
+
+.avaliacao-card{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    padding: 40px 37px;
+    width: 700px !important;
+    height: 300px !important;
+    border: 1px solid #6A9C31;
+    background-color: #3A3A3A;
+}
+
+.splide__list{
+    display: flex;
+    flex-direction: row;
+    gap: 30px !important;
+    padding: 0;
+    list-style: none;
+}
+  
+/* Generic Slide */
+.splide__slide div{
+    display: block;
+    transition: transform 400ms;
+    transform: scale(.9);
+    transform-origin: center center;
+}
+  
+/* Arrow Tweaks for Accessibility */
+.splide .splide__arrow {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    transform: none;
+    border-radius: unset;
+    width: 73px;
+    height: 100%;
+    opacity: .9;
+    z-index: 10;
+}
+
+.splide .splide__arrow  svg {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+}
+
+.splide__arrow.splide__arrow--prev {
+    left: 0;
+    transform: rotate(180deg);
+    background: transparent;
+}
+.splide__arrow.splide__arrow--next {
+    right: 0;
+    background: transparent ;
+}
+
+.avaliacao-card header{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 100%;
+}
+
+.avaliacao-card figure{
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(184, 184, 184);
+}
+
+.avaliacao-card header h1{
+    font-size: 1.5rem;
+}
+
+.avaliacao-card header h2{
+    font-size: 0.8rem;
+}
+
+.avaliacao-card header h2{
+    color: var(--hero-green);
+}
+
+.avaliacao-card header .subLocal{
+    font-weight: 100;
+}
+
+/* pagination */
+.avali-pagination{
+    position: absolute;
+    top: 0px;
+}
+  
+.avali-pagination-bullet{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border: 2px solid var(--hero-green);
+    border-radius: 50%;
+    background: var(--hero-green);
+    --swiper-pagination-bullet-inactive-opacity: 0.1;
+}
+  
+.avali-button-next, 
+.avali-button-prev{
+    position: absolute;
+    top: 35%; 
+    opacity: 0.7;
+    color: var(--hero-green);
+    transition: all 0.3s ease;
+}
+
+.avali-button-prev{
+    left: 5%;
+}
+
+.avali-button-next{
+    right: 5%;
+}
+
+.avali-button-next:hover, .avali-button-prev:hover{
+    opacity: 1;
+    color: var(--hero-green);
+}
+
+/*seção 07*/
+.contato-section{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 53px;
+    align-items: center;
+    position: relative;
+    padding: 130px 10%;
+    background-color: #6A9C31;
+}
+
+.contato-section .txt-box,
+.contato-section .txt-box h1
+{
+    color: white;
+}
+
+.contato-section figure{
+    position: relative;
+    width: 130%;
+    height: 20px;
+}
+
+.contato-section figure img{
+    position: absolute;
+    top: -10px;
+    left: -50%;
+    height: 230%;
+}
+
+.contato-section form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.contato-section form input,
+.contato-section form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 13px;
+}
+
+.contato-section form input{
+    height: 50px;
+}
+
+.contato-section form textarea{
+    height: 130px;
+    resize: none;
+}
+
+.contato-section form button{
+    width: 100%;
+    height: 70px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--black);
+}
+
+/*seção 08*/
+footer{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 53px;
+    align-items: center;
+    padding: 130px 10%;
+    color: white;
+    background-color: var(--black);
+}
+
+footer .info-row{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+footer .info-row div{
+    width: 100%;
+}
+
+footer .info-row h1{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+footer .info-row02  div figure{
+    display: flex;
+    justify-content: start;
+    gap: 13px;
+    align-items: center;
+}
+
+/* 320px */
+@media only screen and (min-width: 320px) {
+    body{
+        overflow-x: hidden;
+    } 
+    
+    .txt-box h1{
+        font-size: 2rem;
+    }
+    
+    .txt-box p{
+        font-size: 1rem;
+    }
+
+    .section-header h2{
+        font-size: 1rem;
+    }
+
+    /* 1st Section hero */
+    .txtHero h1{
+        font-size: 2.3rem;
+    }
+    
+    .txtHero p{
+        font-size: 1rem;
+    }
+
+    .txtHero h1 .hero-span{
+        color: var(--hero-green);
+        background-color: transparent;
+    } 
+    
+    .hero-search input{
+        padding: 17px;
+        font-size: 1rem;
+    }
+
+    .hero-search button{
+        padding: 13px;
+    }
+
+    .hero-search button img{
+        width: 33px;
+    }
+
+    main{
+        height: 173vh;
+    }
+    
+    .hero-section{
+        gap: 10%;
+        height: 95vh;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 90%;
+    }
+
+    .data-card{
+        padding: 10px;
+        width: 100%;
+        height: 153px;
+    }
+
+    .data-card h1{
+        font-size: 1.2rem;
+    }
+
+    .data-card{
+        font-size: 1rem;
+    }
+
+    /* 4th section */
+    .tipo-hover{
+        display: none;
+    }
+}
+
+/* 360px */
+@media only screen and (min-width: 360px) {
+    /* 1st Section hero */
+    main{
+        height: 143vh;
+    }
+    
+    .hero-section{
+        gap: 10%;
+        height: 95vh;
+    }
+
+    .bg-disco{
+        top: 10%;
+    }
+
+    /*5th section*/
+    .parceiro-card .parceiro-logo{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 412px */
+@media only screen and (min-width: 412px) {
+    /* 1st Section hero */
+    main{
+        height: 130vh;
+    }
+    
+    .hero-section{
+        gap: 23%;
+        height: 90vh;
+    }
+
+    .bg-disco{
+        top: 13%;
+    }
+}
+
+/* 425px */
+@media only screen and (min-width: 425px) {
+   /* 1st Section hero */
+    main{
+        height: 130vh;
+    }
+}
+
+/*tablet response*/
+@media only screen and (min-width: 600px) {
+    /*hero section*/
+    .txtHero{
+        width: 90%;
+    }
+
+    .txtHero h1{
+        width: 100%;
+        font-size: 3.3rem;
+    }
+    
+    .txtHero p{
+        font-size: 1.7rem;
+    }
+    
+    .hero-search input{
+        padding: 37px;
+        font-size: 1.7rem;
+    }
+    
+    .hero-search button{
+        padding: 33px;
+    }
+    
+    .txtImg02 span{
+        width: 70%;
+        font-size: 1.8rem;
+    }
+
+    /*4th section ------------------- */
+    .imovel-cards-container{
+        gap: 53px;
+        overflow-x: hidden;
+    }
+    
+    .imovel-card{
+        padding: 40px 25px;
+        width: 293px;
+        height: 450px;
+        color: white;
+    }
+
+    /*5th section*/
+    .parceiro-card{
+        width: 230px !important;
+        height: 400px;
+        background-color: rgb(76, 76, 76);
+    }
+
+    /*7th section --------------------------------- */
+    .contato-section{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        gap: 93px;
+        align-items: center;
+    }
+
+    .contato-section h1{
+        font-size: 2.7rem;
+    }
+
+    .contato-section p{
+        font-size: 1.4rem;
+    }
+
+    .contato-section figure{
+        position: relative;
+        width: 130%;
+        height: 20px;
+    }
+
+    .contato-section figure img{
+        top: 23px;
+        left: -24%;
+        height: 303%;
+    }
+
+    .contato-section form input{
+        height: 63px;
+        font-size: 1.3rem;
+    }
+
+    .contato-section form textarea{
+        height: 130px;
+        resize: none;
+        font-size: 1.3rem;
+    }
+
+    .contato-section form button{
+        font-size: 1.3rem;
+        height: 83px;
+    }
+
+}
+
+/*tablet response (768px)*/
+@media only screen and (min-width: 768px) {
+    /*hero section*/
+    /* 1st Section hero */
+    main{
+        height: 110vh;
+    }
+    
+    .hero-section{
+        gap: 20%;
+        height: 80vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-card h1{
+        font-size: 1.5rem;
+    }
+
+    .data-card{
+        font-size: 1.2rem;
+    }
+
+    .txtHero{
+        width: 90%;
+    }
+
+    .txtHero h1{
+        width: 80%;
+        font-size: 3rem;
+    }
+    
+    .txtHero p{
+        font-size: 1.3rem;
+    }
+    
+    .hero-search input{
+        padding: 23px;
+        font-size: 1.3rem;
+    }
+    
+    .hero-search button{
+        padding: 23px;
+    }
+
+    /* 2nd section ------------------- */
+    .txtImg02 span{
+        width: 70%;
+        font-size: 1.8rem;
+    }
+
+    /*4th section ------------------- */
+    .imovel-cards-container{
+        gap: 53px;
+        overflow-x: hidden;
+    }
+    
+    .imovel-card{
+        padding: 40px 25px;
+        width: 293px;
+        height: 450px;
+        color: white;
+    }
+
+    /*7th section --------------------------------- */
+    .contato-section{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        gap: 93px;
+        align-items: center;
+    }
+
+    .contato-section h1{
+        font-size: 2.7rem;
+    }
+
+    .contato-section p{
+        font-size: 1.4rem;
+    }
+
+    .contato-section figure{
+        position: relative;
+        width: 130%;
+        height: 20px;
+    }
+
+    .contato-section figure img{
+        top: 23px;
+        left: -24%;
+        height: 303%;
+    }
+
+    .contato-section form input{
+        height: 63px;
+        font-size: 1.3rem;
+    }
+
+    .contato-section form textarea{
+        height: 130px;
+        resize: none;
+        font-size: 1.3rem;
+    }
+
+    .contato-section form button{
+        font-size: 1.3rem;
+        height: 83px;
+    }
+
+}
+
+/* 800px */
+@media only screen and (min-width: 800px) {
+    /* 1st Section hero */
+    main{
+        height: 100vh;
+    }
+
+    .hero-section{
+        gap: 20%;
+        height: 73vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 90%;
+    }
+
+    .data-card{
+        width: 100%;
+        height: 153px;
+    }
+
+    .data-card h1{
+        font-size: 1.5rem;
+    }
+
+    .data-card{
+        font-size: 1.2rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /*hero section*/
+    /* 1st Section hero */
+    main{
+        height: 90vh;
+    }
+    
+    .hero-section{
+        gap: 20%;
+        height: 73vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 90%;
+    }
+
+    .data-card{
+        width: 100%;
+        height: 153px;
+    }
+
+    .data-card h1{
+        font-size: 1.5rem;
+    }
+
+    .data-card{
+        font-size: 1.2rem;
+    }
+
+    .txtHero{
+        width: 50%;
+    }
+    
+    .txtHero h1{
+        font-size: 3.3rem;
+    }
+
+    .txtHero p{
+        font-size: 1.5rem;
+    }
+
+    .hero-search input{
+        padding: 23px;
+        font-size: 1rem;
+    }
+
+    .hero-search button{
+        padding: 23px;
+    }
+
+    /* 2nd section ------------------- */
+    .sobre-nos-section{
+        flex-direction: row;
+        gap: 130px;
+        align-items: end;
+        padding: 10% 10% 0 10%;
+    }
+
+    .sobre-nos-section .txt-box{
+        padding: 0;
+    }
+
+    .txtImg-container{
+        width: 40%;
+    }
+    
+    .txtImg01 figure,
+    .txtImg02 figure{
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .txtImg02 figure{
+        text-align: right;
+    }
+    
+    .txtImg01 figure img,
+    .txtImg02 figure img{
+        width: 100%;
+    }
+    
+    .txtImg01 figure img,
+    .txtImg02 figure img{
+        border-radius: 20px;
+    }
+    
+    .txtImg-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .txtImg02{
+        display: flex;
+        justify-content: right;
+        flex-direction: column-reverse;
+        gap: 100px;
+    }
+    
+    .txtImg02 span{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    /*4th section ------------------- */
+    .tipos-section{
+        padding: 3px 10% 3px 10%;
+        width: 100%;
+    }
+    
+    .tipos-section .txt-box{
+        padding: 0;
+    }
+    
+    .imovel-cards-container{
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .imovel-card{
+        padding: 70px 53px;
+        width: 533px;
+        height: 473px;
+        color: white;
+    }
+
+    .imovel-card h1{
+        font-size: 2rem;
+    }
+
+    .tipo-hover{
+        display: flex;
+    }
+
+    /*7th section --------------------------------- */
+    .contato-section{
+        justify-content: start;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .contato-section .txt-box,
+    .contato-section form{
+        width: 40%;
+    }
+
+    .contato-section h1{
+        font-size: 3rem;
+    }
+
+    .contato-section p{
+        font-size: 1.5rem;
+    }
+
+    .contato-section figure img{
+        top: 33px;
+        left: -53%;
+        height: 353%;
+    }
+
+    .contato-section form input{
+        height: 63px;
+        font-size: 1.2rem;
+    }
+
+    .contato-section form textarea{
+        height: 130px;
+        resize: none;
+        font-size: 1.2rem;
+    }
+
+    .contato-section form button{
+        font-size: 1.2rem;
+        height: 73px;
+    }
+
+    /*8th section (footer) ----------------*/
+    footer{
+        display: flex;
+        justify-content: start;
+        flex-direction: row-reverse;
+        gap: 53px;
+        align-items: start;
+        padding: 130px 10%;
+        color: white;
+        background-color: var(--black);
+    }
+
+    footer .info-row{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        height: 203px;
+    }
+
+    footer .info-row01{
+        order: 1;
+    }
+
+    footer .brand-desc p{
+        margin-top: 30px;
+        font-size: 0.9rem;
+        font-weight: lighter;
+    }
+
+}
+
+/* 1024px */
+@media only screen and (min-width: 1024px) {
+    /* 1st Section hero */
+    .menu-btn{
+        display: none;
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        gap: 53px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links{
+        list-style: none;
+    }
+
+    .nav-links li a{
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: light;
+        color: white;
+    }
+
+    .comprar-link{
+        padding: 10px 15px;
+        border: 2px solid white;
+        border-radius: 53px;
+        background-color: var(--green-markdown);
+    }
+
+    .hero-content{
+        justify-content: space-between;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-gallery{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 23px;
+        align-items: center;
+        position: absolute;
+        right: -13%;
+        width: 53%;
+        height: 100%;
+        
+    }
+
+    .gallery-card{
+        display: flex;
+        justify-content: center;
+        align-item: center;
+        width: 23%;
+        height: 100%;
+        border-radius: 23px;
+        overflow: hidden;
+        transition: all 1s ease-in-out;
+    }
+
+    .gallery-card img{
+        height: 100%;
+    }
+
+    /* effects */
+    .highlight{
+        width: 55%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+    }
+
+    .txtHero-container{
+        width: 50%;
+    }
+
+    .txtHero-container h1{
+        width: 100%;
+    }
+
+    .txtHero{
+        width: 75%;
+    }
+
+    main{
+        height: 123vh;
+    }
+
+    .hero-section{
+        gap: 20%;
+        height: 93vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 90%;
+    }
+
+    .data-card{
+        width: 100%;
+        height: 153px;
+    }
+
+    .data-card h1{
+        font-size: 1.5rem;
+    }
+
+    .data-card{
+        font-size: 1.2rem;
+    }
+
+    .txt-box h1{
+        font-size: 2.3rem;
+    }
+    
+    .txt-box p{
+        font-size: 1.1rem;
+    }
+
+    .section-header h2{
+        font-size: 1.2rem;
+    }
+
+    /* 4th section ------------------- */
+    .imovel-cards-container{
+        gap: 40px;
+        width: 100%;
+        /* overflow: overlay; */
+    }
+}
+
+/* 1280px */
+@media only screen and (min-width: 1280px) {
+    /* 1st Section hero */
+    main{
+        height: 133vh;
+    }
+
+    .hero-section{
+        gap: 20%;
+        padding: 5% 10% 0 10%;
+        height: 93vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 80%;
+    }
+
+    .data-card{
+        width: 100%;
+        height: 153px;
+    }
+    
+    .txt-box h1{
+        font-size: 2.3rem;
+    }
+    
+    .txt-box p{
+        font-size: 1.1rem;
+    }
+
+    .section-header h2{
+        font-size: 1.2rem;
+    }
+
+    /* 4th section ------------------- */
+    .imovel-cards-container{
+        gap: 40px;
+        width: 100%;
+        /* overflow: overlay; */
+    }
+}
+
+/* 1366px */
+@media only screen and (min-width: 1366px) {
+    /* 1st Section hero */
+    main{
+        height: 133vh;
+    }
+    
+    .hero-section{
+        gap: 20%;
+        height: 95vh;
+    }
+
+    .bg-disco{
+        top: 17%;
+    }
+
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 73%;
+    }
+
+    .data-card{
+        width: 100%;
+        height: 153px;
+    }
+
+    .data-card h1{
+        font-size: 1.5rem;
+    }
+
+    .data-card{
+        font-size: 1.2rem;
+    }
+}
+
+/* 1440px */
+@media only screen and (min-width: 1440px) {    
+    /* 1st Section hero */
+    /* --> cards from hero section */
+    .data-cards-container{
+        width: 80%;
+    }
+
+    .txt-box h1{
+        font-size: 2.7rem;
+    }
+    
+    .txt-box p{
+        font-size: 1.3rem;
+    }
+
+    .section-header h2{
+        font-size: 1.3rem;
+    }
+
+}
