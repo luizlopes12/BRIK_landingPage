@@ -2,6 +2,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
     new Splide('#splide', {
       type: 'loop',
       perPage: 1,
+      breakpoints: {
+        320: {
+          perPage: 1,
+          focus: 'center',
+          trimSpace: 'false',
+        }
+      },
       focus: 'center',
       autoplay: true,
       interval: 8000,
